@@ -29,6 +29,16 @@ const ShoeController ={
         } catch (error) {
             res.status(200).json(error);
         }
+    },
+
+    deleteShoe: async(req,res) => {
+        try {
+            const delShoe = await Shoe.findByIdAndDelete(req.params.id);
+            res.status(200).json(deleteShoe); 
+        } catch (error) {
+            res.status(500).json(error); 
+        }
+
     }
 };
 
