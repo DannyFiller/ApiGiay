@@ -2,12 +2,12 @@ const {Account} = require("../model/account");
 
 const AccountController ={
 
-    postAccount: async(req,res)=>{
+    postAccount: async(req,res) =>{
         try {
-            const newAccount = new Account(req.body);
-            const saveAccount = newAccount.save();
-            res.status(200).json(saveAccount);
-        } catch (error) {
+            const newAcc = new Account(req.body);
+            const saveAcc = await newAcc.save();
+            res.status(200).json(saveAcc);
+        } catch {
             res.status(500).json(err);
         }
     },
