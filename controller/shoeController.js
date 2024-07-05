@@ -34,7 +34,7 @@ const ShoeController ={
     deleteShoe: async(req,res) => {
         try {
             const delShoe = await Shoe.findByIdAndDelete(req.params.id);
-            res.status(200).json(deleteShoe); 
+            res.status(200).json(delShoe); 
         } catch (error) {
             res.status(500).json(error); 
         }
