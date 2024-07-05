@@ -14,10 +14,10 @@ const AccountController ={
 
     getAllAccount: async(req,res)=>{
         try {
-            const account = await account.find();
+            const account = await Account.find();
             res.status(200).json(account);
         } catch (error) {
-            res.status(500).json(err);
+            res.status(500).json(error);
         }
     }
 }
