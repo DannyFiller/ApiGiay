@@ -14,7 +14,7 @@ const shoeSchema = new mongoose.Schema({
         require:true
     },
     Image:{
-        type: Number,
+        type: String,
         require:true
     },
     Brand:{
