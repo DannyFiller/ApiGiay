@@ -4,7 +4,7 @@ const ShoeController ={
 
     getAllShoe: async(req,res) =>{
         try{
-            const shoes = await Shoe.find();
+            const shoes = await Shoe.find().populate("Brand");
             res.status(200).json(shoes);
         }catch{
             res.status(500).json(err);

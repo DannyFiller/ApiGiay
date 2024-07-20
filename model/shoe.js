@@ -23,6 +23,6 @@ const shoeSchema = new mongoose.Schema({
     }
 
 });
-
+    
 let Shoe = mongoose.model("Shoe",shoeSchema);
 module.exports = {Shoe};

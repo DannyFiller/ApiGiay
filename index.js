@@ -10,6 +10,7 @@ const dotenv = require("dotenv");
 const Shoe = require("./router/shoeRouter");
 const Brand = require("./router/brandRouter");
 const Account = require("./router/accountRouter");
+const Order = require("./router/orderRouter");
 
 dotenv.config();
 // Kết nối CSDL
@@ -34,6 +35,7 @@ app.use(morgan("common"));
 app.use("/shoe",Shoe);
 app.use("/brand",Brand);
 app.use("/account",Account);
+app.use("/order",Order);
 
 app.get("/",(req,res) => {
   res.status(200).json("API Data Shoe");
