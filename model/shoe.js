@@ -9,17 +9,17 @@ const shoeSchema = new mongoose.Schema({
         type: Number,
         require:true
     },
-    Size:{
-        type: Number,
-        require:true
-    },
     Image:{
         type: String,
         require:true
     },
     Brand:{
-        type:mongoose.Types.ObjectId,
-        ref: "Brand"
+        type: String,
+        require:true
+    },
+    Size:{
+        type: [String],
+        require:true
     }
 
 });
